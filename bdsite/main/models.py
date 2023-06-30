@@ -129,6 +129,8 @@ class Doctor(models.Model):
     payment = models.IntegerField()
     percentprofit = models.FloatField(blank=True, null=True)
 
+    def __str__(self):
+        return self.fio
     class Meta:
         managed = False
         db_table = 'doctor'
@@ -142,6 +144,8 @@ class Patient(models.Model):
     bdate = models.DateField(blank=True, null=True)
     address = models.CharField(max_length=30)
 
+    def __str__(self):
+        return self.surname + " " +self.name
     class Meta:
         managed = False
         db_table = 'patient'

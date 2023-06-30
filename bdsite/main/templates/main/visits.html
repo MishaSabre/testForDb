@@ -3,6 +3,37 @@
 {% block title %}Visits page{% endblock %}
 
 {% block content %}
-    <h1>Visits page</h1>
-    <p>Some text</p>
+    <div class="features">
+        {% if visits %}
+            <div class="table-responsive">
+                    <table className="table table-striped table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="sticky-column" >id</th>
+                            <th scope="col" class="sticky-column">FIO doctor</th>
+                            <th scope="col" class="sticky-column">Surname, Name patient</th>
+                            <th scope="col" class="sticky-column">date_of_visit</th>
+
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {% for el in visits%}
+                            <tr>
+                              <td> {{ el.idvisits}}</td>
+                              <td> {{ el.iddoctor}}</td>
+                              <td> {{ el.idpatient}}</td>
+                              <td> {{ el.date_of_visit}}</td>
+
+                            </tr>
+                          {% endfor %}
+                        </tbody>
+                    </table>
+            </div>
+            <a href="{% url 'add_visit' %}"><button class="btn btn-warning">Добавить</button> </a>
+            <a href="{% url 'update_visit' %}"><button class="btn btn-warning">Обновить</button> </a>
+            <a href="{% url 'delete_visit' %}"><button class="btn btn-warning">Удалить</button> </a>
+        {% else %}
+            <p>Нет записей в таблице!</p>
+        {% endif %}
+    </div>
 {% endblock %}

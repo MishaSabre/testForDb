@@ -3,6 +3,39 @@
 {% block title %}About page{% endblock %}
 
 {% block content %}
-    <h1>About page</h1>
-    <p>Some text</p>
+    {% if patients %}
+        <div class="table-responsive">
+                <table className="table table-striped table-bordered">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="sticky-column" >id</th>
+                        <th scope="col" class="sticky-column">Surname</th>
+                        <th scope="col" class="sticky-column">Name</th>
+                        <th scope="col" class="sticky-column">Patronymic</th>
+                        <th scope="col" class="sticky-column">BDate</th>
+                        <th scope="col" class="sticky-column">Address</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+
+                      {% for el in patients%}
+                        <tr>
+                          <td> {{ el.idpatient}}</td>
+                          <td> {{ el.surname}}</td>
+                          <td> {{ el.name}}</td>
+                          <td> {{ el.patronymic}}</td>
+                          <td> {{ el.bdate}}</td>
+                          <td> {{ el.address}}</td>
+                        </tr>
+                      {% endfor %}
+                    </tbody>
+                </table>
+        </div>
+        <a href="{% url 'add_patient' %}"><button class="btn btn-warning">Добавить</button> </a>
+        <a href="{% url 'update_patient' %}"><button class="btn btn-warning">Обновить</button> </a>
+        <a href="{% url 'delete_patient' %}"><button class="btn btn-warning">Удалить</button> </a>
+    {% else %}
+        <p>Нет записей в таблице!</p>
+    {% endif %}
 {% endblock %}

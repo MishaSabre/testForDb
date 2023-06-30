@@ -1,5 +1,5 @@
 body{
-    background: white;
+    background: #2c2c2c;
 
 }
 
@@ -69,9 +69,9 @@ main .features .table-responsive{
     min-height:250px;
     max-height: 300px;
     max-width: 900px;
-    color: black;
 }
 
-main .features .table-responsive table thead tr th{
-    color: black
+main a{
+    top: 1000px;
+    text-decoration: none;
 }
