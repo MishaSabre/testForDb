@@ -3,6 +3,7 @@
 {% block title %}About page{% endblock %}
 
 {% block content %}
+    <div class="features">
     {% if patients %}
         <div class="table-responsive">
                 <table className="table table-striped table-bordered">
@@ -21,7 +22,7 @@
 
                       {% for el in patients%}
                         <tr>
-                          <td> {{ el.idpatient}}</td>
+                          <td><a href="{% url 'patient_detail' el.idpatient %}"> {{ el.idpatient}} </a></td>
                           <td> {{ el.surname}}</td>
                           <td> {{ el.name}}</td>
                           <td> {{ el.patronymic}}</td>
@@ -33,9 +34,8 @@
                 </table>
         </div>
         <a href="{% url 'add_patient' %}"><button class="btn btn-warning">Добавить</button> </a>
-        <a href="{% url 'update_patient' %}"><button class="btn btn-warning">Обновить</button> </a>
-        <a href="{% url 'delete_patient' %}"><button class="btn btn-warning">Удалить</button> </a>
     {% else %}
         <p>Нет записей в таблице!</p>
     {% endif %}
+    </div>
 {% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}DeleteDoctor page{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Форма для удаления врача</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button class ="btn btn-success" type="submit">Удалить врача</button>
+    </form>
+
+</div>
+{% endblock %}

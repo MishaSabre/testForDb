@@ -1,0 +1,20 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}AddVisit page{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Форма для добавления визита к доктору</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.iddoctor }}<br>
+        {{ form.idpatient }}<br>
+        {{ form.date_of_visit }}<br>
+        {{ form.idvisits }}
+        <span>{{ error }}</span>
+
+        <button class ="btn btn-success" type="submit">Добавить визит</button>
+    </form>
+
+</div>
+{% endblock %}

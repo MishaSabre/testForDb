@@ -1,0 +1,35 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}Payment per page{% endblock %}
+
+{% block content %}
+    <h1>Отчет о плате</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Фамилия</th>
+                <th>Имя</th>
+                <th>Дата</th>
+                <th>Плата</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr>
+                    <td>{{ row.0 }}</td>
+                    <td>{{ row.1 }}</td>
+                    <td>{{ row.2 }}</td>
+                    <td>{{ row.3 }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <form method="POST" action="receipt_patient" >
+        {% csrf_token %}
+        <input type="date" name="first" placeholder="first date" title="Enter first date">
+        <input type="date" name="second" placeholder="second date" title="Enter second date">
+        <input type="number" name="third" placeholder="id patient" title="Enter id patient">
+        <input type="submit" value="Enter">
+    </form>
+{% endblock %}

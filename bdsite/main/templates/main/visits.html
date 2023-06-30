@@ -19,7 +19,7 @@
                         <tbody>
                           {% for el in visits%}
                             <tr>
-                              <td> {{ el.idvisits}}</td>
+                              <td> <a href="{% url 'visit_detail' el.idvisits %}"> {{ el.idvisits}} </a></td>
                               <td> {{ el.iddoctor}}</td>
                               <td> {{ el.idpatient}}</td>
                               <td> {{ el.date_of_visit}}</td>
@@ -30,8 +30,7 @@
                     </table>
             </div>
             <a href="{% url 'add_visit' %}"><button class="btn btn-warning">Добавить</button> </a>
-            <a href="{% url 'update_visit' %}"><button class="btn btn-warning">Обновить</button> </a>
-            <a href="{% url 'delete_visit' %}"><button class="btn btn-warning">Удалить</button> </a>
+
         {% else %}
             <p>Нет записей в таблице!</p>
         {% endif %}

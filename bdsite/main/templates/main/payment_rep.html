@@ -1,0 +1,30 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}Payment per page{% endblock %}
+
+{% block content %}
+    <h1>Отчет {{ name }}</h1>
+    <table>
+        <thead>
+            <tr>
+            <th>Фио</th>
+            <th>Зарплата</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+            <td>{{ row.0 }}</td>
+            <td>{{ row.1}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <form method="POST" action="payment_rep" >
+        {% csrf_token %}
+        <input type="date" name="first" placeholder="first date" title="Enter first date">
+        <input type="date" name="second" placeholder="second date" title="Enter second date">
+        <input type="submit" value="Enter">
+    </form>
+{% endblock %}

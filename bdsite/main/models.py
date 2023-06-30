@@ -131,6 +131,9 @@ class Doctor(models.Model):
 
     def __str__(self):
         return self.fio
+
+    def get_absolute_url(self):
+        return f'/{self.iddoctor}'
     class Meta:
         managed = False
         db_table = 'doctor'
@@ -146,6 +149,9 @@ class Patient(models.Model):
 
     def __str__(self):
         return self.surname + " " +self.name
+
+    def get_absolute_url(self):
+        return f'/{self.idpatient}'
     class Meta:
         managed = False
         db_table = 'patient'
@@ -157,9 +163,12 @@ class Visits(models.Model):
     date_of_visit = models.DateField()
     idvisits = models.AutoField(primary_key=True)
 
+    def __str__(self):
+        return self.iddoctor + " "  + self.idpatient + " " + self.date_of_visit
+    def get_absolute_url(self):
+        return f'/{self.idvisits}'
     class Meta:
         managed = False
         db_table = 'visits'
-        verbose_name = 'visit'
-        verbose_name_plural = 'visits'
+
 

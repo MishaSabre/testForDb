@@ -1,0 +1,17 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}Main page{% endblock %}
+
+{% block content %}
+
+    <div class="features">
+        <h1>{{ patient.surname }}</h1>
+        <p>{{ patient.name }}</p>
+        <p>{{ patient.patronymic }}</p>
+        <p>{{ patient.bdate }}</p>
+        <p>{{ patient.address }}</p>
+        <a href="{% url  'patient_delete' patient.idpatient %}"><button class="btn btn-danger">Удалить</button> </a>
+        <a href="{% url  'patient_update' patient.idpatient %}"><button class="btn btn-info">Редактировать</button> </a>
+    </div>
+
+{% endblock %}

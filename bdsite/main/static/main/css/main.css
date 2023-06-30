@@ -66,12 +66,34 @@ main {
 }
 
 main .features .table-responsive{
+    margin-left: 5%;
     min-height:250px;
     max-height: 300px;
-    max-width: 900px;
+    max-width: 671px;
+    border: 1px solid white;
 }
 
 main a{
     top: 1000px;
     text-decoration: none;
+}
+
+form{
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+}
+
+.table {
+    border-spacing: 30px;
+    border: 1px solid white;
+}
+main th, td {
+    padding: 15px;
+    border: 1px solid white;
+    color: white;
+}
+
+button {
+    margin-top: 10%;
 }

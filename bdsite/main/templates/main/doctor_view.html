@@ -1,0 +1,15 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}Main page{% endblock %}
+
+{% block content %}
+
+    <div class="features">
+        <h1>{{ doctor.fio }}</h1>
+        <p>{{ doctor.specs }}</p>
+        <p>{{ doctor.payment }}</p>
+        <a href="{% url  'doctor_delete' doctor.iddoctor %}"><button class="btn btn-danger">Удалить</button> </a>
+        <a href="{% url  'doctor_update' doctor.iddoctor %}"><button class="btn btn-info">Редактировать</button> </a>
+    </div>
+
+{% endblock %}

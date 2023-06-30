@@ -1,0 +1,22 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}AddPatient page{% endblock %}
+
+{% block content %}
+<div class="features">
+    <h1>Форма для добавления пациента</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.idpatient }}<br>
+        {{ form.surname }}<br>
+        {{ form.name }}<br>
+        {{ form.patronymic }}<br>
+        {{ form.bdate }}<br>
+        {{ form.address }} <br>
+        <span>{{ error }}</span>
+
+        <button class ="btn btn-success" type="submit">Добавить пациента</button>
+    </form>
+
+</div>
+{% endblock %}
