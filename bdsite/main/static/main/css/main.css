@@ -1,5 +1,5 @@
 body{
-    background: #2c2c2c;
+    background: white;
 
 }
 
@@ -52,12 +52,12 @@ aside ul li{
 }
 
 aside ul li:hover, aside ul a:hover{
-    color: #4964f9;
+    color: #black;
     text-decoration: none;
     transform: scale(1.05);
 }
 
-main .features{
+main {
     float: left;
     color: white;
     margin-top: 10px;
@@ -69,5 +69,9 @@ main .features .table-responsive{
     min-height:250px;
     max-height: 300px;
     max-width: 900px;
-    color: white;
+    color: black;
+}
+
+main .features .table-responsive table thead tr th{
+    color: black
 }
