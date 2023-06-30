@@ -156,4 +156,6 @@ class Visits(models.Model):
     class Meta:
         managed = False
         db_table = 'visits'
+        verbose_name = 'visit'
+        verbose_name_plural = 'visits'
 
