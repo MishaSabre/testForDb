@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 77 54" xmlns="http://www.w3.org/2000/svg">
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(185, 57, 57);" cx="38.199" cy="40.185" rx="34.195" ry="13.057"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(70, 179, 58);" cx="38.405" cy="27.7" rx="36.256" ry="14.089"/>
+  <ellipse style="stroke: rgb(0, 0, 0); fill: rgb(79, 53, 207);" cx="38.405" cy="15.788" rx="37.904" ry="15.234"/>
+  <text style="font-family: Arial, sans-serif; font-size: 15.1px; white-space: pre;" x="171.505" y="278.494" transform="matrix(0.383154, 0, 0, 0.426087, -54.087318, -101.386429)">DJango Site for lab3</text>
+</svg>

@@ -1,0 +1,106 @@
+{% extends 'main/layout.html'%}
+
+{% block title %}Main page{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Страница с таблицей врачей</h1>
+        <div class="table-responsive">
+            <table className="table table-striped table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col" className="sticky-column">Job</th>
+                    <th scope="col">Pay</th>
+                    <th scope="col">Vacation Time</th>
+                    <th scope="col">Extra Column 1</th>
+                    <th scope="col">Extra Column 2</th>
+                    <th scope="col">Extra Column 3</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="sticky-column">Software Engineer 1</td>
+                    <td>$70,000</td>
+                    <td>2 Weeks</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                  </tr>
+                  <tr>
+                    <td className="sticky-column">Software Engineer 2</td>
+                    <td>$85,000</td>
+                    <td>3 Weeks</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                  </tr>
+                  <tr>
+                    <td className="sticky-column">Software Engineer 3</td>
+                    <td>$100,000</td>
+                    <td>4 Weeks</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                  </tr>
+                  <tr>
+                    <td className="sticky-column">Senior Software Engineer</td>
+                    <td>$120,000</td>
+                    <td>4 Weeks</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                  </tr>
+                  <tr>
+                    <td className="sticky-column">Expert Software Engineer</td>
+                    <td>$140,000</td>
+                    <td>4 Weeks</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                  </tr>
+                  <tr>
+                    <td className="sticky-column">Awesome Software Engineer</td>
+                    <td>Millions</td>
+                    <td>Loads</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                  </tr>
+                  <tr>
+                    <td className="sticky-column">Awesome Software Engineer</td>
+                    <td>Millions</td>
+                    <td>Loads</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                  </tr>
+                  <tr>
+                    <td className="sticky-column">Awesome Software Engineer</td>
+                    <td>Millions</td>
+                    <td>Loads</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                  </tr>
+                  <tr>
+                    <td className="sticky-column">Awesome Software Engineer</td>
+                    <td>Millions</td>
+                    <td>Loads</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                  </tr>
+                  <tr>
+                    <td className="sticky-column">Awesome Software Engineer</td>
+                    <td>Millions</td>
+                    <td>Loads</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                    <td>More Info</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+      <a href="{% url 'add_doctor' %}"><button class="btn btn-warning">Добавить</button> </a>
+    </div>
+{% endblock %}
