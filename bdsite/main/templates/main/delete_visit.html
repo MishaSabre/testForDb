@@ -7,6 +7,7 @@
     <h1>Форма для удаления пациента</h1>
     <form method="post">
         {% csrf_token %}
+        <input type="hidden" name="id_Visit" value="{{ Visits.pk }}">
         <button class ="btn btn-success" type="submit">Удалить визит</button>
     </form>
 

@@ -7,6 +7,7 @@
     <h1>Форма для добавления пациента</h1>
     <form method="post">
         {% csrf_token %}
+        <input type="hidden" name="id_Patient" value="{{ Patient.pk }}">
         {{ form.idpatient }}<br>
         {{ form.surname }}<br>
         {{ form.name }}<br>

@@ -7,6 +7,7 @@
     <h1>Форма для добавления визита к доктору</h1>
     <form method="post">
         {% csrf_token %}
+        <input type="hidden" name="id_Visit" value="{{ Visits.pk }}">
         {{ form.iddoctor }}<br>
         {{ form.idpatient }}<br>
         {{ form.date_of_visit }}<br>
